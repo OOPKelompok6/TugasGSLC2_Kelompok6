@@ -10,9 +10,9 @@ public class Main {
 	public static void main(String[] args) {
 		int Condition = -1, subState = -1;
 		Scanner NewScan = new Scanner(System.in);
-		String userPath = "user.csv";
-		String teamPath = "teams.csv";
-				
+		String userPath = System.getProperty("user.dir").replace("\\", "\\\\").concat("\\\\src\\\\user.csv");
+		String teamPath = System.getProperty("user.dir").replace("\\", "\\\\").concat("\\\\src\\\\teams.csv");
+		
 		while(Condition != 3) {
 			System.out.printf("Database Hackathon 2023\n======================\n1. Insert Data\n2. Show\n3. Exit\nChoose: ");
 			Condition = NewScan.nextInt();

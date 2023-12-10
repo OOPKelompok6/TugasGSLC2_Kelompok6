@@ -10,7 +10,7 @@ public class userRepository implements Repository {
 	private String teamPath;
 	
 	public userRepository() {
-		teamPath = "teams.csv";
+		teamPath = System.getProperty("user.dir").replace("\\", "\\\\").concat("\\\\src\\\\teams.csv");
 	}
 	
 	public String[] Insert(String[] insertArrStr, Connection csvScanner) {
